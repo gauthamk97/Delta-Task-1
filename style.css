@@ -1,0 +1,43 @@
+.imgDiv {
+	text-align: center;
+}
+
+#Venue {
+	color: gray;
+	text-align: center;
+	font-family: "Lucida Console", Monaco, monospace
+	font-weight: 100;
+}
+
+#timerContainer {
+	text-align: center;
+	border-width: 0px;
+	border-color: white;
+	border-style: solid;
+	border-radius: 30px;
+	padding: 10px;
+	padding-top: 0px;
+}
+
+.container {
+	display: inline-block;
+}
+
+.timer {
+	text-align: center;
+	color: white;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 500%;
+	font-weight: 200;
+	margin: auto;
+	width: 150px;
+	display: inline-block;
+}
+
+.label {
+	color: white;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 100%;
+	font-weight: 200;
+	margin: auto;
+}
