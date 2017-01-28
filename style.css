@@ -11,10 +11,6 @@
 
 #timerContainer {
 	text-align: center;
-	border-width: 0px;
-	border-color: white;
-	border-style: solid;
-	border-radius: 30px;
 	padding: 10px;
 	padding-top: 0px;
 }

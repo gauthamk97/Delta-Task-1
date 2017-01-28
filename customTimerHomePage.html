@@ -4,11 +4,60 @@
 <head>
 	<title>Custom Timer</title>
 	<link rel="stylesheet" href="customTimerStyle.css">
-	<script src="customTimerScript.js"></script>
 </head>
 
-<body>
+<body background="Assets/bg.jpg">
 
-	<h1>this is custom timer</h1>
+	<h1 id="CustomTimerHeading">
+		<span style="color: #E52530;">C</span><span style="color: #C84976;">u</span><span style="color: #A25FA1;">s</span><span style="color: #7462A6;">t</span><span style="color: #4A62A4;">o</span><span style="color: #4E7890;">m</span>
+		<span style="color: #749E53;">T</span><span style="color: #C1D22F;">i</span><span style="color: #E3C50F;">m</span><span style="color: #DB7B36;">e</span><span style="color: #EC4334;">r</span>
+	</h1>
+
+	<!-- Input -->
+	<div style="text-align: center;">
+
+		<input id="input1" type="date">
+		<input id="input2" type="time">
+
+	</div>
+
+	<br>
+
+	<div id="timerContainer">
+
+		<div class="container">
+			<h1 id="days" class="timer">00</h1>
+			<h4 class="label">Days</h4>
+		</div>
+
+		<div class="container">
+			<h1 id="hours" class="timer">00</h1>
+			<h4 class="label">Hours</h4>
+		</div>
+
+		<div class="container">
+			<h1 id="minutes" class="timer">00</h1>
+			<h4 class="label">Minutes</h4>
+		</div>
+
+		<div class="container">
+			<h1 id="seconds" class="timer">00</h1>
+			<h4 class="label">Seconds</h4>
+		</div>
+
+	</div>
+
+	<br>
+
+	<div style="text-align: center;">
+
+		<button id="startButton" onclick="clickedStart()">Start</button>
+
+	</div>
+
+	<script src="customTimerScript.js"></script>
+	<br><br>
+
+	<a style="text-align: center;display: block;color: white;" href="homePage.html">Back to Coldplay Countdown</a>
 
 </body>
