@@ -11,7 +11,7 @@ var secondsLabel = document.getElementById('seconds');
 var concertDate = new Date("2017-03-31T19:30:00+08:00");
 
 setTimer();
-setInterval(setTimer, 1000);
+var timerInterval = setInterval(setTimer, 1000);
 
 function setTimer() {
 	var currentDate = new Date();
@@ -20,6 +20,12 @@ function setTimer() {
 	var currentTime = currentDate.getTime();
 
 	var timeLeft = concertTime - currentTime;
+
+	if (timeLeft <= 0) {
+		window.clearInterval(timerInterval);
+		window.alert("Concert has begun!");
+		return;
+	}
 
 	daysLeft = Math.floor(timeLeft/(1000*60*60*24));
 	daysLabel.innerHTML = daysLeft;

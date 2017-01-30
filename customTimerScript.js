@@ -41,8 +41,6 @@ function clickedStart() {
 	finalDate = new Date("" + document.getElementById('input1').value + "T" + document.getElementById('input2').value + "+05:30");
 
 	setTimer();
-	isTimerRunning = true;
-	startButton.innerHTML = "Stop";
 	
 }
 
@@ -54,6 +52,14 @@ function setTimer() {
 	var currentTime = currentDate.getTime();
 
 	var timeLeft = finalTime - currentTime;
+
+	if (timeLeft <= 0) {
+		window.clearInterval(timerVar);
+		window.alert('Timer Over!');
+		startButton.innerHTML = "Start";
+		isTimerRunning = false;
+		return;
+	}
 
 	daysLeft = Math.floor(timeLeft/(1000*60*60*24));
 	daysLabel.innerHTML = daysLeft;
@@ -78,6 +84,14 @@ function setTimer() {
 
 		var timeLeft = finalTime - currentTime;
 
+		if (timeLeft <= 0) {
+			window.clearInterval(timerVar);
+			window.alert('Timer Over!');
+			startButton.innerHTML = "Start";
+			isTimerRunning = false;
+			return;
+		}
+
 		daysLeft = Math.floor(timeLeft/(1000*60*60*24));
 		daysLabel.innerHTML = daysLeft;
 		var days = daysLeft*24*60*60*1000;
@@ -92,6 +106,10 @@ function setTimer() {
 
 		secondsLeft = Math.floor((timeLeft - days - hours - minutes)/1000);
 		secondsLabel.innerHTML = secondsLeft;
+
 	}, 1000);
+
+	isTimerRunning = true;
+		startButton.innerHTML = "Stop";
 	
 }
