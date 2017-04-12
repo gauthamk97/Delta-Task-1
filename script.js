@@ -8,7 +8,7 @@ var hoursLabel = document.getElementById('hours');
 var minutesLabel = document.getElementById('minutes');
 var secondsLabel = document.getElementById('seconds');
 
-var concertDate = new Date("2017-03-31T19:30:00+08:00");
+var concertDate = new Date("2017-04-31T19:30:00+08:00");
 
 setTimer();
 var timerInterval = setInterval(setTimer, 1000);
